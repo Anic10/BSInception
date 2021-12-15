@@ -27,13 +27,14 @@
 5) Jenkins
 6) BrowserStack Live & Automate
 ## How to run?
-1) Enter your userName and AccessKey in conf/parallel.conf.js file
-2) Run testng.xml 
+Clone the repo
+1) Enter your userName and AccessKey in conf/parallel.conf.js or conf/single.conf.js file
+2) Run parallel.testng.xml / single.testng.xml
 3) See the results on Browserstack Automate page.
 4) You can run it via command prompt using 
 4.1) mvn compile
 
-4.2) mvn test -P parallel
+4.2) mvn test -P parallel or mvn test -P single
 
 5) You can also create a freestyle job in jenkins, Set JAVA_HOME,M2_HOME,install Browserstack and enter its credentials.
 6) In Build section of Jenkin Go to Build-> Add build step -> Select Invoke Top level maven targets -> select maven version -> enter goal as test
